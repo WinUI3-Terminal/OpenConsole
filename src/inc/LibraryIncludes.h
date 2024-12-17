@@ -80,6 +80,7 @@
 // END Patch
 
 #include <gsl/pointers>
+#include <gsl/narrow>
 
 // CppCoreCheck
 #include <CppCoreCheck/Warnings.h>

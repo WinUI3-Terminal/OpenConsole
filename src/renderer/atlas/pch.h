@@ -36,6 +36,7 @@
 #endif
 #endif
 #include <cassert>
+#include <gsl/narrow>
 // END Patch
 
 #include <gsl/pointers>
