@@ -419,7 +419,10 @@ bool GdiEngine::FontHasWesternScript(HDC hdc)
         pPolyTextLine->rcl.top = pPolyTextLine->y + topOffset;
         pPolyTextLine->rcl.right = pPolyTextLine->rcl.left + (til::CoordType)cchCharWidths;
         pPolyTextLine->rcl.bottom = pPolyTextLine->y + coordFontSize.height - bottomOffset;
-        pPolyTextLine->pdx = polyWidth.data();
+        // WinUI3 Terminal Patch
+        // pPolyTextLine->pdx = polyWidth.data();
+        pPolyTextLine->pdx = reinterpret_cast<int*>(polyWidth.data());
+        // END Patch
 
         if (trimLeft)
         {

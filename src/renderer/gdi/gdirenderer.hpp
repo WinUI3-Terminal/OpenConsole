@@ -165,7 +165,10 @@ namespace Microsoft::Console::Render
         // It's important the pool is first so it can be given to the others on construction.
         std::pmr::unsynchronized_pool_resource _pool;
         std::pmr::vector<std::pmr::wstring> _polyStrings;
-        std::pmr::vector<std::pmr::basic_string<int>> _polyWidths;
+        // WinUI3 Terminal Patch: Non-standard STL extension: std::char_traits<int>, will be removed in future versions
+        // std::pmr::vector<std::pmr::basic_string<int>> _polyWidths;
+        std::pmr::vector<std::pmr::basic_string<char32_t>> _polyWidths;
+        // END Patch
 
         std::vector<DWORD> _imageMask;
 

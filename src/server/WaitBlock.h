@@ -42,10 +42,15 @@ private:
                      _In_ IWaitRoutine* const pWaiter);
 
     ConsoleWaitQueue* const _pProcessQueue;
-    std::_List_const_iterator<std::_List_val<std::_List_simple_types<ConsoleWaitBlock*>>> _itProcessQueue;
-
+    // WinUI3 Terminal Patch
+    // std::_List_const_iterator<std::_List_val<std::_List_simple_types<ConsoleWaitBlock*>>> _itProcessQueue;
+    typename std::list<ConsoleWaitBlock*>::const_iterator _itProcessQueue;
+    // END Patch
     ConsoleWaitQueue* const _pObjectQueue;
-    std::_List_const_iterator<std::_List_val<std::_List_simple_types<ConsoleWaitBlock*>>> _itObjectQueue;
+    // WinUI3 Terminal Patch
+    // std::_List_const_iterator<std::_List_val<std::_List_simple_types<ConsoleWaitBlock*>>> _itObjectQueue;
+    typename std::list<ConsoleWaitBlock*>::const_iterator _itObjectQueue;
+    // END Patch
 
     CONSOLE_API_MSG _WaitReplyMessage;
 

@@ -9,6 +9,16 @@ link_directories(${PROJECT_SOURCE_DIR}/compiled)
 
 add_compile_definitions(FMT_HEADER_ONLY)
 
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_definitions(_ITERATOR_DEBUG_LEVEL=2)
+else()
+    add_compile_definitions(_ITERATOR_DEBUG_LEVEL=0)
+endif()
+
+
+add_compile_options(-flto)
+add_link_options(-s -flto)
+
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 # ------------------ BEGIN ConTSF ------------------ #

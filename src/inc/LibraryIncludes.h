@@ -67,7 +67,6 @@
 // and uses the C-namespaced "max" which conflicts with Windows definitions.
 
 // WinUI3 Terminal Patch
-#include <gsl/gsl>
 #if __has_include(<gsl/gsl_util>)
 #include <gsl/gsl_util>
 #else
