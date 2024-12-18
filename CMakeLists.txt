@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.30)
 
 project(OpenConsole)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -15,11 +15,8 @@ else()
     add_compile_definitions(_ITERATOR_DEBUG_LEVEL=0)
 endif()
 
-
 add_compile_options(-flto)
-add_link_options(-s -flto)
-
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+add_link_options(-s -flto -lmsvcrt)
 
 # ------------------ BEGIN ConTSF ------------------ #
 

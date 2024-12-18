@@ -167,7 +167,7 @@ namespace Microsoft::Console::Render
         std::pmr::vector<std::pmr::wstring> _polyStrings;
         // WinUI3 Terminal Patch: Non-standard STL extension: std::char_traits<int>, will be removed in future versions
         // std::pmr::vector<std::pmr::basic_string<int>> _polyWidths;
-        std::pmr::vector<std::pmr::basic_string<char32_t>> _polyWidths;
+        std::pmr::vector<std::pmr::vector<int>> _polyWidths;
         // END Patch
 
         std::vector<DWORD> _imageMask;

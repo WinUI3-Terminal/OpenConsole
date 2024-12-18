@@ -24,20 +24,8 @@
 #include <VersionHelpers.h>
 #include <wincodec.h>
 
-// WinUI3 Terminal Patch
-#if __has_include(<gsl/gsl_util>)
 #include <gsl/gsl_util>
-#else
-#include <gsl/util>
-#if defined(_MSC_VER) && !defined(__clang__)
-#pragma message("orignal source directly include gsl_util, fix it.")
-#else
-#warning orignal source directly include gsl_util, fix it.
-#endif
-#endif
 #include <cassert>
-#include <gsl/narrow>
-// END Patch
 
 #include <gsl/pointers>
 #include <wil/com.h>
