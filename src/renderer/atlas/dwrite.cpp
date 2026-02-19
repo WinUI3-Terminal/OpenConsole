@@ -2,7 +2,7 @@
 // Licensed under the MIT license.
 
 #include "pch.h"
-#include "dwrite.h"
+#include "dwrite_my.h"
 
 #pragma warning(disable : 26429) // Symbol '...' is never tested for nullness, it can be marked as not_null (f.23).
 

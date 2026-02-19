@@ -222,7 +222,7 @@ ${PROJECT_SOURCE_DIR}/oss/pcg/include
 # ------------------ BEGIN ConRenderAtlas HLSL Shaders ------------------ #
 
 option(BUILD_ATLAS_SHADERS "Enable build Atlas HLSL Shaders" ON)
-set(FXC_COMPILER_PATH "C:/Program Files (x86)/Windows Kits/10/bin/10.0.22621.0/x64/fxc.exe")
+set(FXC_COMPILER_PATH "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/fxc.exe")
 
 add_custom_target(AtlasShaders)
 
